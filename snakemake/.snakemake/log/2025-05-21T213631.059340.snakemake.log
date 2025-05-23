@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in line 9 of /scratch1/fs1/martyomov/carisa/Laura_Total/souporcell/snakemake/Snakefile:
+Wildcards in input files cannot be determined from output files:
+'stage'
