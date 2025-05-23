@@ -4,5 +4,7 @@ The original R and Python scripts have been moditifed to make sure the same pipe
 
 WashU RIS uses IBM LSF schedulers and dockers, so each step may involve a job script that calls another wrapper script that performs the actual step. The job scripts to be submitted are ordered by their step numbers. I may not have updated some of paths given that there were changes in file location during the demultiplexing process.
 
+**Caveat**: There may be some issues with running souporcell over pooled sequencing data that were processed using `cellranger multi` as described in https://github.com/wheaton5/souporcell/issues/128. I had to re-align the data using `cellranger count`.
+
 Maybe I'll clean up the scripts and optimize them later on. 
 ![The codes do run, don't they](https://preview.redd.it/4dnvvjeuq0541.jpg?width=640&crop=smart&auto=webp&s=af02d59262a047fa6fadacf51cbf108ea2c0647a)
