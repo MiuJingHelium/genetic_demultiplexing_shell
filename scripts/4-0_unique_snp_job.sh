@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WD=$1
-sorc_dir=$2
+sorc_dir=$2 #run over single patient sorc
 
 cd $WD
 
@@ -14,5 +14,5 @@ export LSF_DOCKER_VOLUMES="/storage1/fs1/martyomov/Active/:/storage1/fs1/martyom
             -J unique_snp -n 8 -M 64GB -o unique_snp.out \
 	        -e unique_snp.err -R 'select[mem>64MB] rusage[mem=64GB] span[hosts=1]' \
             -a "docker(kalisaz/scrna-extra:r4.4.0)" /bin/bash -c \
-            "Rscript ../snakemake/only_unique_snp.R $sorc_dir"
+            "Rscript ./snakemake/only_unique_snp.R $sorc_dir"
   

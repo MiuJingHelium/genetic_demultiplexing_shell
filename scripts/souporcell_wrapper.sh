@@ -19,7 +19,7 @@ cd $WD # note the WD
 
 souporcell_pipeline.py \
     -i ${BAM_dir}/$sample/$patient/${patient}.bam -b $BC_dir/$sample/${patient}.txt \
-    -f /storage1/fs1/martyomov/Active/References/10X/SC/Human/refdata-cellranger-GRCh38-3.0.0/fasta/genome.fa\
+    -f /storage1/fs1/martyomov/Active/References/10X/SC/Human/refdata-gex-GRCh38-2024-A/fasta/genome.fa\
     -t 8 -o souporcell/${patient} -k 4
 
 gunzip souporcell/${patient}/souporcell_merged_sorted_vcf.vcf.gz

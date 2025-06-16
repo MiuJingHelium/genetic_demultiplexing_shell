@@ -14,7 +14,8 @@ vartrix --mapq 30 -b $BAM -c $BC \
     --scoring-method coverage --threads 8 \
     --ref-matrix $OUTDIR/ref.mtx \
     --out-matrix $OUTDIR/alt.mtx -v $VCF \
-    --fasta /storage1/fs1/martyomov/Active/References/10X/SC/Human/refdata-cellranger-GRCh38-3.0.0/fasta/genome.fa --umi
+    --fasta /storage1/fs1/martyomov/Active/References/10X/SC/Human/refdata-gex-GRCh38-2024-A/fasta//genome.fa --umi
+
 
 ~/souporcell/souporcell/target/release/souporcell \
     -k 6 -a $OUTDIR/alt.mtx -r $OUTDIR/ref.mtx \

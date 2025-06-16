@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WD=$1
-sorc_dir=$2
+sorc_dir=$2 #run over single patient sorc
 
 cd $WD
 
@@ -19,5 +19,4 @@ for sample in ${SAMPLES[@]}; do
 	        -e ${sample}_gatk.err -R 'select[mem>64MB] rusage[mem=64GB] span[hosts=1]' \
             -a "docker(broadinstitute/gatk:4.6.2.0)" /bin/bash -c \
             "gatk --java-options '-Xmx4G' VariantsToTable --variant ${vcf} --output ${output} -F CHROM -F POS -GF GT"
-  
 done

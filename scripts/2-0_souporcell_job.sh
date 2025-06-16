@@ -21,6 +21,6 @@ for sample in ${SAMPLES[@]}; do
             -J ${patient}_sorc -n 8 -M 64GB -o ${patient}_sorc.out \
 	        -e ${patient}_sorc.err -R 'select[mem>64MB] rusage[mem=64GB] span[hosts=1]' \
             -a "docker(cumulusprod/souporcell:2.5)" /bin/bash -c \
-            "./souporcell_wrapper.sh $WD $BAM_dir $BC_dir $sample $patient"
+            "./scripts/souporcell_wrapper.sh $WD $BAM_dir $BC_dir $sample $patient"
     done
 done
